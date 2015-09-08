@@ -29,7 +29,7 @@ public:
   double getY();
   double getZ();
 
-  //Calcs
+  //Calculators
   double distanceTo(Point& point);
   double computeArea(Point& point1, Point& point2, Point& point3);
 };

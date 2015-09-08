@@ -4,7 +4,7 @@
 
 using namespace std;
 // Default constructor
-// Initializes the point to (0.0, 0.0)
+// Initializes the point to (0.0, 0.0, 0.0)
 Point::Point() {
   x = 0.0;
   y = 0.0;
@@ -12,7 +12,7 @@ Point::Point() {
 }
 
 // Constructor
-// Initializes the point to (initX, initY)
+// Initializes the point to (initX, initY, initZ)
 Point::Point(double initX, double initY, double initZ) {
   x = initX;
   y = initY;
@@ -55,11 +55,14 @@ double Point::getZ(){
   return z;
 }
 
+//calculates distance from point to point using pythag theorem
 double Point::distanceTo(Point &point) {
 
   return sqrt(((x-point.getX())*(x-point.getX()))+((y-point.getY())*(y-point.getY()))+((z-point.getZ())*(z-point.getZ())));
 }
 
+//finds length of all sides using distanceTo() function, then
+//calculates area of triangle using side lengths and heron's theorem
 double Point::computeArea(Point &point1, Point &point2, Point &point3) {
   double side1 = point1.distanceTo(point2);
   double side2 = point2.distanceTo(point3);
