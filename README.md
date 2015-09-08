@@ -1,10 +1,10 @@
 My Point class is a but a simple one with only three private member float variables and
 a few functions:
 
-a default constructor,
+a default constructor
 
-a constructor with input-defined variable initializations,
-a destructor,
+a constructor with input-defined variable initializations
+a destructor
 an accessor for each of the three member variables,
 a mutator for each of the three member variables,
 a functions that calculates the distance between two points,
